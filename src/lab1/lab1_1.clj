@@ -1,4 +1,4 @@
-(ns labs.lab1.lab1-1)
+(ns lab1.lab1-1)
 
 (defn combine
   [result alphabet]
@@ -15,7 +15,7 @@
 (defn permute
   [coll alphabet acc]
   (if (= (count coll) 0)
-    (permute acc alphabet '())
+    acc
     (permute (next coll)
              alphabet
              (concat acc (combine (list (first coll))
