@@ -21,4 +21,4 @@
     (test/is (= (integrate (fn [x] x) 10 1) 50))
     (test/is (= (integrate (fn [x] (* x x)) 5 1) 335))))
 
-(test/run-tests 'labs.lab2.lab2-1)
+(test/run-tests 'lab2.lab2-1)
