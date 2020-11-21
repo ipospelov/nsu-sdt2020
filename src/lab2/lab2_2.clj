@@ -13,7 +13,8 @@
 
 (defn get-integrator
   [fun step-size]
-  (fn [x] (nth (integral-sequence fun step-size) (- (/ x step-size) 1))))
+  (let [seq (integral-sequence fun step-size)]
+    (fn [x] (nth seq (- (/ x step-size) 1)))))
 
 (let [integrate-f (get-integrator (fn [x] x) 0.01)]
   (println (time (integrate-f 1000)))
