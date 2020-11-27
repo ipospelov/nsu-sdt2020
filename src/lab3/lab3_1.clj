@@ -1,4 +1,4 @@
-(ns labs.lab3.lab3-1
+(ns lab3.lab3-1
   (:require [clojure.test :as test]))
 
 (defn separate
@@ -37,4 +37,4 @@
   (test/testing "Test parallel-filter"
     (test/is (= (parallel-filter (heavy-pred odd?) 3 '(1 2 3 4 5 6 7 8 9 10)) '(1 3 5 7 9)))))
 
-(test/run-tests 'labs.lab3.lab3-1)
+(test/run-tests 'lab3.lab3-1)
